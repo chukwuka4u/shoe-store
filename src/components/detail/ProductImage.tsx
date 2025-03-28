@@ -1,10 +1,13 @@
 import Image from 'next/image'
 
 const ProductImageGallery = ({ img }: { img: string | null }) => {
+
     return (
         <section className="product-gallery">
             <Image
-                src={`${img}`}
+                src={img!}
+                width={100}
+                height={100}
                 alt="ADIDAS 4DFWD X PARLEY RUNNING SHOES main view"
                 className="object-cover z-0 w-full rounded-2xl aspect-[1.21]"
             />

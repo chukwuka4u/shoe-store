@@ -36,7 +36,7 @@ const ProductDetailPage = ({ params, }: { params: Promise<{ id: string }> }) => 
     return (
         <main className="flex relative flex-col mx-auto w-full max-w-[480px]">
             <Header />
-            <ProductImageGallery img={product && product.image} />
+            <ProductImageGallery img={product ? product.image : "https://cdn.builder.io/api/v1/image/assets/TEMP/0f6f8c4211b803f0fba39961bf46ee564caf5824ccfcab28c620ab470d49040e?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"} />
             <ProductInfo />
             {/* <ColorSelector /> */}
             <SizeSelector setSize={setSize} />

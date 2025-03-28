@@ -18,6 +18,8 @@ const ProductRecommendations = () => {
                             <Image
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/b058b8a4bc504523dea1ff1da29b2caacff623e2098b12280b694f4d28aaedfd?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                                 alt="Previous"
+                                width={100}
+                                height={100}
                                 className="object-contain overflow-hidden self-stretch my-auto w-4 aspect-square"
                             />
                         </div>
@@ -30,6 +32,8 @@ const ProductRecommendations = () => {
                             <Image
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/f6f1237365a5b73216a27db3fb750ebc0f2f16bcdc3f6da103b7b37c106ccc6f?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                                 alt="Next"
+                                width={100}
+                                height={100}
                                 className="object-contain overflow-hidden self-stretch my-auto w-4 aspect-square"
                             />
                         </div>

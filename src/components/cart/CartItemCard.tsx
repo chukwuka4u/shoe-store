@@ -12,6 +12,8 @@ const CartItemCard = ({ product }: { product: ProductOrder }) => {
             <Image
                 src={image}
                 alt={title}
+                width={100}
+                height={100}
                 className="object-contain overflow-hidden shrink-0 rounded-3xl aspect-square w-[157px]"
             />
             <div className="flex flex-col flex-1 shrink self-start basis-0">

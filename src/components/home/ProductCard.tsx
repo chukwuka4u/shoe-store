@@ -30,6 +30,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
                 <Image
                     src={image}
                     alt={title}
+                    width={100}
+                    height={100}
                     className="object-cover z-0 flex-1 shrink rounded-xl aspect-[0.9] basis-4 w-[150px]"
                 />
                 {label &&

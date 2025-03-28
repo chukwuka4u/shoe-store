@@ -55,6 +55,8 @@ const NewsletterSignup = () => {
                     <Image
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/9397b077088e6eced9af1f330c26ce14599a5b56f6d58221c34e98dd78b06f27?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                         alt="Decoration"
+                        width={100}
+                        height={100}
                         className="object-contain overflow-hidden aspect-square w-[17px]"
                     />
                 </div>
