@@ -44,7 +44,7 @@ function CartContextProvider({ children }: { children: ReactNode }) {
             const newItems = [...prev];
             const existingItem = newItems.find(i => i.id === item.id) as ProductOrder | undefined;
 
-            let indx = newItems.indexOf(existingItem!)
+            const indx = newItems.indexOf(existingItem!)
 
             if (existingItem)
 

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from 'next/image'
 
 const NewsletterSignup = () => {
     const [email, setEmail] = useState("");
@@ -51,7 +52,7 @@ const NewsletterSignup = () => {
                     </form>
                 </div>
                 <div className="flex flex-col items-end px-9 pb-11 mt-8 max-w-full w-[200px]">
-                    <img
+                    <Image
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/9397b077088e6eced9af1f330c26ce14599a5b56f6d58221c34e98dd78b06f27?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                         alt="Decoration"
                         className="object-contain overflow-hidden aspect-square w-[17px]"

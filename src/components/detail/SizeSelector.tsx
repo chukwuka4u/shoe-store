@@ -11,7 +11,7 @@ const SizeSelector = ({ setSize }: { setSize: Dispatch<SetStateAction<ShoeSizes>
 
     const handleSizeSelect = (size: string) => {
         setSelectedSize(size);
-        let str = parseInt(size, 10) as SetStateAction<ShoeSizes>
+        const str = parseInt(size, 10) as SetStateAction<ShoeSizes>
         setSize(str)
     };
 

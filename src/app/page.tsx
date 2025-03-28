@@ -2,10 +2,8 @@
 
 import React from "react";
 import HeroSection from "../components/home/HeroSection";
-import NewDropsSection from "../components/home/NewDropsSection";
 import ProductGrid from "../components/home/ProductGrid";
 import Header from "@/components/Header";
-import { getShoes } from "@/lib/config/firebase/app"
 import Footer from "@/components/Footer";
 
 const HomePage: React.FC = () => {

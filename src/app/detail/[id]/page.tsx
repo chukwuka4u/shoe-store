@@ -27,10 +27,10 @@ const ProductDetailPage = ({ params, }: { params: Promise<{ id: string }> }) => 
         () => {
             (async () => {
                 const { id } = await params
-                let prod = await getShoe(id) as Product
+                const prod = await getShoe(id) as Product
                 setProduct(prod)
             })()
-        }, []
+        }
     )
     React.useEffect(() => console.log(size), [size])
     return (

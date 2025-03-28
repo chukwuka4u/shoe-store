@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import ProductCard from "../home/ProductCard";
+import Image from 'next/image'
 
 const ProductRecommendations = () => {
     return (
@@ -15,7 +15,7 @@ const ProductRecommendations = () => {
                         aria-label="Previous product"
                     >
                         <div className="flex gap-1 justify-center items-center px-2 w-8 h-8 rounded-lg bg-neutral-800 min-h-8">
-                            <img
+                            <Image
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/b058b8a4bc504523dea1ff1da29b2caacff623e2098b12280b694f4d28aaedfd?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                                 alt="Previous"
                                 className="object-contain overflow-hidden self-stretch my-auto w-4 aspect-square"
@@ -27,7 +27,7 @@ const ProductRecommendations = () => {
                         aria-label="Next product"
                     >
                         <div className="flex gap-1 justify-center items-center px-2 w-8 h-8 rounded-lg bg-neutral-800 min-h-8">
-                            <img
+                            <Image
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/f6f1237365a5b73216a27db3fb750ebc0f2f16bcdc3f6da103b7b37c106ccc6f?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                                 alt="Next"
                                 className="object-contain overflow-hidden self-stretch my-auto w-4 aspect-square"

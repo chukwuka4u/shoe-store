@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button";
 import { useRouter } from "next/navigation"
+import Image from 'next/image'
 
 interface ProductCardProps {
     id: string,
@@ -26,7 +27,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     return (
         <article className="flex-1 shrink basis-0">
             <div className="flex relative gap-2.5 px-1 pt-1 w-full text-xs font-semibold text-white whitespace-nowrap rounded-2xl bg-neutral-50 min-h-[180px]">
-                <img
+                <Image
                     src={image}
                     alt={title}
                     className="object-cover z-0 flex-1 shrink rounded-xl aspect-[0.9] basis-4 w-[150px]"
@@ -73,7 +74,7 @@ export default ProductCard;
 //   return (
 //     <article className="flex-1 shrink basis-0">
 //       <div className="flex relative gap-2.5 p-2 w-full text-xs font-semibold text-white whitespace-nowrap rounded-2xl bg-neutral-50 min-h-[180px]">
-//         <img
+//         <Image
 //           src={image}
 //           alt={title}
 //           className="object-contain overflow-hidden z-0 flex-1 shrink rounded-xl aspect-square basis-4 w-[155px]"

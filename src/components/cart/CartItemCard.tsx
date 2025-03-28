@@ -1,6 +1,7 @@
 "use client"
 import { ProductOrder } from "@/lib/types/ProductOrder";
 import { useCartContext } from '@/lib/providers/cart-provider'
+import Image from 'next/image'
 
 const CartItemCard = ({ product }: { product: ProductOrder }) => {
 
@@ -8,7 +9,7 @@ const CartItemCard = ({ product }: { product: ProductOrder }) => {
     const { addItem, removeItem, deleteItem } = useCartContext();
     return (
         <div className="flex gap-4 mt-2 w-full">
-            <img
+            <Image
                 src={image}
                 alt={title}
                 className="object-contain overflow-hidden shrink-0 rounded-3xl aspect-square w-[157px]"

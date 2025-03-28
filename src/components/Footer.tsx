@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image'
 
 const Footer = () => {
     return (
@@ -50,28 +51,28 @@ const Footer = () => {
                     <h3 className="text-xl font-semibold text-orange-400">Follow us</h3>
                     <div className="flex gap-4 items-start mt-4">
                         <a href="#" aria-label="Facebook">
-                            <img
+                            <Image
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/72259d3c6efb4b34f0aa2a68430881508cee28bf51b08d6bde3f49f5635dccac?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                                 alt="Facebook"
                                 className="object-contain overflow-hidden shrink-0 w-6 aspect-square"
                             />
                         </a>
                         <a href="#" aria-label="Twitter">
-                            <img
+                            <Image
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/44e4f34e4700a3762da71168e40d7545f5acb45b316d5ffa8d3fa4983c8968c8?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                                 alt="Twitter"
                                 className="object-contain overflow-hidden shrink-0 w-6 aspect-square"
                             />
                         </a>
                         <a href="#" aria-label="Instagram">
-                            <img
+                            <Image
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/266801fafefbb897c536c0c782f04be3a64727b06bea1542470ed8553cec8e6b?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                                 alt="Instagram"
                                 className="object-contain overflow-hidden shrink-0 w-6 aspect-square"
                             />
                         </a>
                         <a href="#" aria-label="YouTube">
-                            <img
+                            <Image
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/fa24a7f420f15814a51f35e3d555027a938b9fe65a18c6b40d4cada5dfb78801?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                                 alt="YouTube"
                                 className="object-contain overflow-hidden shrink-0 w-6 aspect-square"
@@ -81,7 +82,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <img
+            <Image
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b50b1e84a77a8effffd412fe8f1ed111a064933e9a295e12fc18ff431cce0bb?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
                 alt="Footer decoration"
                 className="object-contain overflow-hidden absolute bottom-0 z-0 aspect-square h-[89px] right-[-3px] w-[358px]"
