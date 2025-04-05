@@ -35,7 +35,6 @@ const ProductDetailPage = ({ params, }: { params: Promise<{ id: string }> }) => 
     React.useEffect(() => console.log(size), [size])
     return (
         <main className="flex relative flex-col mx-auto w-full max-w-[480px]">
-            <Header />
             <ProductImageGallery img={product ? product.image : "https://cdn.builder.io/api/v1/image/assets/TEMP/0f6f8c4211b803f0fba39961bf46ee564caf5824ccfcab28c620ab470d49040e?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"} />
             <ProductInfo />
             {/* <ColorSelector /> */}
@@ -48,8 +47,6 @@ const ProductDetailPage = ({ params, }: { params: Promise<{ id: string }> }) => 
                 <div className="flex shrink-0 w-8 h-1 rounded-lg bg-neutral-800 bg-opacity-30" />
                 <div className="flex shrink-0 w-8 h-1 rounded-lg bg-neutral-800 bg-opacity-30" />
             </section>
-            <Footer />
-            <div className="flex absolute z-0 gap-2 items-start self-start min-h-1.5 right-[155px] top-[253px]" />
         </main >
     );
 };
