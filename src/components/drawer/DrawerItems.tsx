@@ -29,7 +29,7 @@ export default function DrawerItems() {
                 <kbd className="ml-auto hidden font-sans text-xs group-data-[focus]:inline">⌘D</kbd>
             </button>
             <div className='flex flex-col'>
-                {people.map((person) => <Menu>
+                {people.map((person, indx) => <Menu key={indx}>
                     <MenuButton className="inline-flex items-center gap-2 rounded-md py-1.5 px-3 w-full text-sm/6 font-semibold shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-700 data-[open]:bg-slate-500 data-[focus]:outline-1 data-[focus]:outline-white">
                         <div className="flex justify-between my-2 p-1 border rounded-2xl">
                             <p>{person}</p>
