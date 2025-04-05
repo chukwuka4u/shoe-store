@@ -4,11 +4,9 @@ import ProductInfo from "@/components/detail/ProductInfo";
 import SizeSelector from "@/components/detail/SizeSelector";
 import ProductActions from "@/components/detail/ProductActions";
 import ProductDescription from "@/components/detail/ProductDescription";
-import Footer from "@/components/Footer";
 import ProductImageGallery from "@/components/detail/ProductImage";
 import type { Product } from "@/lib/types/Product";
 import { getShoe } from "@/lib/config/firebase/app";
-import Header from "@/components/Header";
 import type { ProductOrder } from "@/lib/types/ProductOrder";
 import type { ShoeSizes } from "@/lib/types/ShoeSizes";
 
