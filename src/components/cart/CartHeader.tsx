@@ -6,7 +6,11 @@ const CartHeader = () => {
     return (
         <header className="flex gap-10 justify-between items-start p-4 w-full rounded-xl bg-neutral-50 mb-2">
             <div className="flex gap-10 items-start">
-                <p>gritandsole</p>
+                <img
+                    src={"assets/group_10.png"}
+                    alt="logo"
+                    className="object-contain h-[40px]"
+                />
                 <div className="flex shrink-0 w-20 h-5" />
             </div>
             <button onClick={() => router.back()}>

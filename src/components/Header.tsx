@@ -4,6 +4,8 @@ import { useRouter, usePathname } from 'next/navigation'
 import { useCartContext } from '@/lib/providers/cart-provider'
 import CartHeader from "./cart/CartHeader";
 import Drawer from "./drawer/Drawer";
+import Image from "next/image"
+import logo from "assets/Group 10 (5).png"
 
 
 const Header = () => {
@@ -13,7 +15,7 @@ const Header = () => {
 
     return (
         <>
-            <header className="flex gap-10 justify-between items-start p-4 w-full rounded-xl bg-neutral-50 mb-2">
+            <header className="flex gap-10 justify-between items-center p-3 w-full rounded-xl bg-neutral-50 mb-2">
                 <button onClick={() => { setOpen(true); console.log("clicked") }}>
                     <div className="flex flex-row text-sm font-semibold whitespace-nowrap text-neutral-800">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -22,7 +24,11 @@ const Header = () => {
                     </div>
                 </button>
                 <button className="px-auto" onClick={() => router.push('/')}>
-                    <p>gritandsole</p>
+                    <img
+                        src={"assets/group_10.png"}
+                        alt="logo"
+                        className="object-contain h-[40px]"
+                    />
                 </button>
                 <button onClick={() => router.push("/cart")}>
                     <div className="flex flex-row text-sm font-semibold whitespace-nowrap text-neutral-800">
