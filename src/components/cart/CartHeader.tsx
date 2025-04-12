@@ -6,7 +6,7 @@ const CartHeader = () => {
     return (
         <header className="flex gap-10 justify-between items-start p-4 w-full rounded-xl bg-neutral-50 mb-2">
             <div className="flex gap-10 items-start">
-                <p>Steeze</p>
+                <p>gritandsole</p>
                 <div className="flex shrink-0 w-20 h-5" />
             </div>
             <button onClick={() => router.back()}>

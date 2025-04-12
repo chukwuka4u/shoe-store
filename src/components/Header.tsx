@@ -22,7 +22,7 @@ const Header = () => {
                     </div>
                 </button>
                 <button className="px-auto" onClick={() => router.push('/')}>
-                    <p>Steeze</p>
+                    <p>gritandsole</p>
                 </button>
                 <button onClick={() => router.push("/cart")}>
                     <div className="flex flex-row text-sm font-semibold whitespace-nowrap text-neutral-800">

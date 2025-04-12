@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
                             <div className="w-full font-semibold">
                                 <h2 className="text-2xl text-white">UP YOUR SHOE GAME</h2>
                                 <p className="text-sm text-stone-200">
-                                    Steeze introducing the best of men shoes, comfort and style
+                                    GritAndSole introducing the best of men shoes, comfort and style
                                 </p>
                             </div>
                             <div className="mt-2 w-28 max-w-full">
