@@ -2,7 +2,7 @@ import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { useState } from 'react'
 
 export default function MyModal({ id }: { id: string }) {
-    let [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(true)
 
     function close() {
         setIsOpen(false)
