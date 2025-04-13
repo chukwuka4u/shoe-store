@@ -14,7 +14,7 @@ const OrderSummary: React.FC = () => {
         const quantity = v[0], price = v[1];
         setTotalQuantity(quantity);
         setTotalPrice(price)
-    })
+    }, [getTotQuantnPrice, cartItems])
 
     return (
         <section className="p-4 mt-6 max-w-full text-base font-semibold rounded-2xl bg-neutral-50 text-neutral-800 w-[358px]">
