@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { useCartContext } from '@/lib/providers/cart-provider'
 import MyModal from "../order/modal";
 
@@ -6,19 +6,15 @@ const OrderSummary: React.FC = () => {
 
     const { getTotQuantnPrice, submitOrder } = useCartContext();
     const [totalPrice, setTotalPrice] = useState<number>();
-    const [totalQuantity, setTotalQuantity] = useState<number>(1000);
+    const [totalQuantity, setTotalQuantity] = useState<number>();
     const [orderId, setOrderId] = useState<string>()
-
-    const memoizedFunction = useCallback(() => {
-        console.log("function executed")
-    }, [getTotQuantnPrice])
 
     useEffect(() => {
         const v = getTotQuantnPrice();
         const quantity = v[0], price = v[1];
         setTotalQuantity(quantity);
         setTotalPrice(price)
-    }, [memoizedFunction])
+    }, [getTotQuantnPrice])
 
     const getTotPrice = () => (totalPrice ? (Number(totalPrice) + 1000) : 0.00)
 

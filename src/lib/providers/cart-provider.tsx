@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, createContext, ReactNode, useContext } from 'react'
+import { useState, useEffect, createContext, ReactNode, useContext, useCallback } from 'react'
 import { ProductOrder } from '../types/ProductOrder'
 import { writeOrder } from '@/lib/config/firebase/app'
 
@@ -88,7 +88,7 @@ function CartContextProvider({ children }: { children: ReactNode }) {
         return id;
     }
     //
-    const getTotalQuantity = () => {
+    const getTotalQuantity = useCallback(() => {
         const lst = cartItems.map(i => i.quantity)
         for (const i in lst) {
             if (Number(i) == 0)
@@ -105,7 +105,7 @@ function CartContextProvider({ children }: { children: ReactNode }) {
                 plst[Number(i)] += plst[Number(i) - 1]
         }
         return [lst[lst.length - 1], plst[plst.length - 1]]
-    }
+    }, [cartItems]);
 
     const val: CartContextProp = {
         cartItems,
