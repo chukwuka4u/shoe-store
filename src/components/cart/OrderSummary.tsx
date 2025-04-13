@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useCartContext } from '@/lib/providers/cart-provider'
 import MyModal from "../order/modal";
 
@@ -9,14 +9,18 @@ const OrderSummary: React.FC = () => {
     const [totalQuantity, setTotalQuantity] = useState<number>(1000);
     const [orderId, setOrderId] = useState<string>()
 
+    const memoizedFunction = useCallback(() => {
+        console.log("function executed")
+    }, [getTotQuantnPrice])
+
     useEffect(() => {
         const v = getTotQuantnPrice();
         const quantity = v[0], price = v[1];
         setTotalQuantity(quantity);
         setTotalPrice(price)
-    }, [getTotQuantnPrice])
+    }, [memoizedFunction])
 
-    const getTotPrice = () => totalPrice ? Number(totalPrice) + 1000 : 0.00
+    const getTotPrice = () => (totalPrice ? (Number(totalPrice) + 1000) : 0.00)
 
     return (
         <section className="p-4 mt-6 max-w-full text-base font-semibold rounded-2xl bg-neutral-50 text-neutral-800 w-[358px]">
