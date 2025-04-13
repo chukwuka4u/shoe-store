@@ -16,6 +16,8 @@ const OrderSummary: React.FC = () => {
         setTotalPrice(price)
     }, [getTotQuantnPrice])
 
+    const getTotPrice = () => totalPrice ? Number(totalPrice) + 1000 : 0.00
+
     return (
         <section className="p-4 mt-6 max-w-full text-base font-semibold rounded-2xl bg-neutral-50 text-neutral-800 w-[358px]">
             <h2 className="text-xl">Order Summary</h2>
@@ -34,7 +36,7 @@ const OrderSummary: React.FC = () => {
                 </div>
                 <div className="flex gap-10 justify-between items-start mt-4 w-full text-xl whitespace-nowrap">
                     <p>Total</p>
-                    <p className="opacity-80">N{totalPrice ? Number(totalPrice) + 1000 : 0.00}</p>
+                    <p className="opacity-80">N{getTotPrice()}</p>
                 </div>
             </div>
             <button className="mt-4 w-full text-sm font-medium tracking-wide text-white uppercase whitespace-nowrap" onClick={async () => {
