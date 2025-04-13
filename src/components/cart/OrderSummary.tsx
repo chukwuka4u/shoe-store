@@ -1,15 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCartContext } from '@/lib/providers/cart-provider'
-import { setMaxIdleHTTPParsers } from "http";
 import MyModal from "../order/modal";
-
-interface OrderSummaryProps {
-    items: number;
-    itemsTotal: string;
-    delivery: string;
-    tax: string;
-    total: string;
-}
 
 const OrderSummary: React.FC = () => {
 

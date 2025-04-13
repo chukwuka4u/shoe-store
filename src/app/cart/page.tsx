@@ -2,8 +2,6 @@
 import PromoBanner from "@/components/PromoBanner";
 import CartItem from "@/components/cart/CartItem";
 import OrderSummary from "@/components/cart/OrderSummary";
-import ProductRecommendations from "@/components/detail/ProductRecommendation";
-import NewsletterSignup from "@/components/NewsLetterSection";
 
 function Cart() {
     return (

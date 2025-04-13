@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from "react";
+import React from "react";
 import { useCartContext } from "@/lib/providers/cart-provider"
 import CartItemCard from "./CartItemCard";
 

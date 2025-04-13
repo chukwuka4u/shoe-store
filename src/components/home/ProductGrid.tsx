@@ -2,8 +2,6 @@ import React from "react";
 import ProductCard from "./ProductCard";
 import type { Product } from "@/lib/types/Product"
 import { getShoes } from "@/lib/config/firebase/app";
-import Image from "next/image";
-import loadingImage from "assets/load_image.png"
 
 const ProductGrid: React.FC = () => {
     const [products, setProducts] = React.useState<Product[] | null>(null)
