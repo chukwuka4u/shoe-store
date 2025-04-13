@@ -1,13 +1,17 @@
 import React from "react";
 import { useRouter } from "next/navigation"
+import Image from "next/image"
+import logo from "assets/group_10.png"
 
 const CartHeader = () => {
     const router = useRouter();
     return (
         <header className="flex gap-10 justify-between items-start p-4 w-full rounded-xl bg-neutral-50 mb-2">
             <div className="flex gap-10 items-start">
-                <img
-                    src={"assets/group_10.png"}
+                <Image
+                    src={logo}
+                    width={100}
+                    height={100}
                     alt="logo"
                     className="object-contain h-[40px]"
                 />

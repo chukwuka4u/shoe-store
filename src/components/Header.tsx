@@ -5,7 +5,7 @@ import { useCartContext } from '@/lib/providers/cart-provider'
 import CartHeader from "./cart/CartHeader";
 import Drawer from "./drawer/Drawer";
 import Image from "next/image"
-import logo from "assets/Group 10 (5).png"
+import logo from "assets/group_10.png"
 
 
 const Header = () => {
@@ -24,8 +24,10 @@ const Header = () => {
                     </div>
                 </button>
                 <button className="px-auto" onClick={() => router.push('/')}>
-                    <img
-                        src={"assets/group_10.png"}
+                    <Image
+                        src={logo}
+                        width={100}
+                        height={100}
                         alt="logo"
                         className="object-contain h-[40px]"
                     />

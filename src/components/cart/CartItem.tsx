@@ -8,9 +8,6 @@ const CartItem: React.FC = () => {
 
     const { cartItems } = useCartContext()
 
-    useEffect(() => {
-        console.log(cartItems)
-    })
     return (
         <article className="p-4 mt-6 w-full rounded-2xl bg-neutral-50 max-w-[358px]">
             <h2 className="w-full text-xl font-semibold text-neutral-800">

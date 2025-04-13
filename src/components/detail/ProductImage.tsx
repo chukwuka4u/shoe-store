@@ -1,11 +1,11 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
-const ProductImageGallery = ({ img }: { img: string | null }) => {
+const ProductImageGallery = ({ img }: { img: string | StaticImageData }) => {
 
     return (
         <section className="product-gallery">
             <Image
-                src={img!}
+                src={img}
                 width={100}
                 height={100}
                 alt="ADIDAS 4DFWD X PARLEY RUNNING SHOES main view"

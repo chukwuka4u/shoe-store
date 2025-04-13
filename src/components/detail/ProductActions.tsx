@@ -8,7 +8,7 @@ const ProductActions = ({ product }: { product: ProductOrder }) => {
     const { addItem } = useCartContext();
 
     const handleAddToCart = (item: ProductOrder) => {
-
+        alert("successfully added item to cart 😊")
         addItem(item)
     };
 

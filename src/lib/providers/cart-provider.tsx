@@ -9,6 +9,8 @@ type CartContextProp = {
     removeItem: (i: ProductOrder) => void,
     deleteItem: (i: ProductOrder) => void,
     submitOrder: () => Promise<string>
+    getTotQuantnPrice: () => number[],
+
 }
 const CartContext = createContext<CartContextProp | null>(null)
 
@@ -78,8 +80,31 @@ function CartContextProvider({ children }: { children: ReactNode }) {
         //get the document Id
         console.log("order submitted")
         const id = await writeOrder(cartItems)
+        if (id) {
+            localStorage.removeItem('cart')
+            setCartItems([])
+        }
         console.log(id)
         return id;
+    }
+    //
+    const getTotalQuantity = () => {
+        const lst = cartItems.map(i => i.quantity)
+        for (const i in lst) {
+            if (Number(i) == 0)
+                continue;
+            else
+                lst[Number(i)] += lst[Number(i) - 1]
+        }
+        //
+        const plst = cartItems.map(i => i.quantity * i.price)
+        for (const i in plst) {
+            if (Number(i) == 0)
+                continue;
+            else
+                plst[Number(i)] += plst[Number(i) - 1]
+        }
+        return [lst[lst.length - 1], plst[plst.length - 1]]
     }
 
     const val: CartContextProp = {
@@ -88,6 +113,7 @@ function CartContextProvider({ children }: { children: ReactNode }) {
         removeItem,
         deleteItem,
         submitOrder,
+        getTotQuantnPrice: getTotalQuantity
     }
 
     return (

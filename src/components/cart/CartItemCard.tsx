@@ -31,7 +31,6 @@ const CartItemCard = ({ product }: { product: ProductOrder }) => {
                         </p>
                         <button arial-lable="decrement" onClick={(e) => {
                             e.preventDefault();
-                            console.log(e.isDefaultPrevented())
                             removeItem(product);
                         }}>
 

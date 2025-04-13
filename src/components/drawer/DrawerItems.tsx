@@ -1,27 +1,8 @@
-// export default function DrawerItems() {
-//     return (
-//         <div>
-//             <p className="my-2 p-1 border rounded-2xl">New Drops <span>🔥</span></p>
-//             <div className="flex justify-between my-2 p-1 border rounded-2xl">
-//                 <p>Men</p>
-//                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5">
-//                     <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
-//                 </svg>
-//             </div>
-//             <div className="flex justify-between my-2 p-1 border rounded-2xl">
-//                 <p>Women</p>
-//                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5">
-//                     <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
-//                 </svg>
-//             </div>
-//         </div >
-//     )
-// }
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 
 export default function DrawerItems() {
 
-    const people = ["Men", "Women"]
+    const people = ["Loafers", "Sneakers"]
     return (
         <div>
             <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
@@ -47,18 +28,28 @@ export default function DrawerItems() {
                         <MenuItem>
                             <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
                                 {/* <Square2StackIcon className="size-4 fill-white/30" /> */}
-                                Loafers
+                                {indx == 0 ? "Gucci" : "Nike"}
                                 <kbd className="ml-auto hidden font-sans text-xs group-data-[focus]:inline">⌘D</kbd>
                             </button>
                         </MenuItem>
                         <div className="my-1 h-px bg-slate-500" />
                         <MenuItem>
                             <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
-                                {/* <ArchiveBoxXMarkIcon className="size-4 fill-white/30" /> */}
-                                Sneakers
-                                <kbd className="ml-auto hidden font-sans text-xs group-data-[focus]:inline">⌘A</kbd>
+                                {/* <Square2StackIcon className="size-4 fill-white/30" /> */}
+                                {indx == 0 ? "Prada" : "Puma"}
+                                <kbd className="ml-auto hidden font-sans text-xs group-data-[focus]:inline">⌘D</kbd>
                             </button>
                         </MenuItem>
+                        <div className="my-1 h-px bg-slate-500" />
+                        <MenuItem>
+                            <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+                                {/* <Square2StackIcon className="size-4 fill-white/30" /> */}
+                                {indx == 0 ? "Versace" : "Addidas"}
+                                <kbd className="ml-auto hidden font-sans text-xs group-data-[focus]:inline">⌘D</kbd>
+                            </button>
+                        </MenuItem>
+                        <div className="my-1 h-px bg-slate-500" />
+
                     </MenuItems>
                 </Menu>
                 )}

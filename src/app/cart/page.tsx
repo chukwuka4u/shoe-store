@@ -14,14 +14,9 @@ function Cart() {
                 <CartItem
                 />
                 <OrderSummary
-                    items={1}
-                    itemsTotal="$130.00"
-                    delivery="$6.99"
-                    tax="-"
-                    total="$130.00"
                 />
-                <ProductRecommendations />
-                <NewsletterSignup />
+                {/* <ProductRecommendations /> */}
+                {/* <NewsletterSignup /> */}
                 {/* <Footer /> */}
                 <p className="mt-6 text-base text-center underline decoration-auto decoration-solid text-neutral-800 underline-offset-auto">
                     <a
@@ -29,7 +24,7 @@ function Cart() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        © All rights reserved | Made with
+                        © UI design made with
                     </a>
                     <a
                         href="https://visiata.com/"

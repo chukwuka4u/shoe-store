@@ -32,25 +32,26 @@ const ProductCard: React.FC<ProductCardProps> = ({
                     alt={title}
                     width={100}
                     height={100}
-                    className="object-cover z-0 flex-1 shrink rounded-xl aspect-[0.9] basis-4 w-[150px]"
+                    className="object-cover z-0 flex-1 shrink rounded-xl aspect-[0.8] basis-4 w-[150px]"
                 />
-                {label &&
+                {/* {label &&
                     <div
                         className={`absolute top-2 left-2 z-0 gap-2.5 self-start px-2 py-1 ${labelColor} rounded-xl`}
                     >
                         {label}
                     </div>
-                }
+                } */}
             </div>
             <div className="mt-4 w-full">
-                <h3 className="text-base font-semibold text-neutral-800">{title}</h3>
+                <h3 className="text-base font-medium text-neutral-800">{title}</h3>
                 <div className="mt-2 w-full">
                     <Button variant="secondary" onClick={() => router.push(`/detail/${id}`)}>
-                        View Product -{" "}
+                        view product -{" "}
                         <span style={{ color: "rgba(255,165,47,1)" }}>#{price}</span>
                     </Button>
                 </div>
             </div>
+
         </article>
     );
 };

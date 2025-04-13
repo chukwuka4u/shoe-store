@@ -2,6 +2,8 @@ import React from "react";
 import ProductCard from "./ProductCard";
 import type { Product } from "@/lib/types/Product"
 import { getShoes } from "@/lib/config/firebase/app";
+import Image from "next/image";
+import loadingImage from "assets/load_image.png"
 
 const ProductGrid: React.FC = () => {
     const [products, setProducts] = React.useState<Product[] | null>(null)
@@ -19,7 +21,7 @@ const ProductGrid: React.FC = () => {
     return (
         <section className="w-full">
             <div className="grid grid-cols-2 gap-4 items-start mt-6 w-full">
-                {products && products.map((product, index) => (
+                {products ? products.map((product, index) => (
                     <ProductCard
                         key={index}
                         id={product.id}
@@ -29,7 +31,10 @@ const ProductGrid: React.FC = () => {
                         title={product.title}
                         price={product.price}
                     />
-                ))}
+                ))
+                    :
+                    <div>LOADING...</div>
+                }
             </div>
         </section>
     );
