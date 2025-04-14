@@ -10,11 +10,10 @@ const OrderSummary: React.FC = () => {
     const [orderId, setOrderId] = useState<string>()
 
     useEffect(() => {
-        const v = getTotQuantnPrice();
-        const quantity = v[0], price = v[1];
+        const [quantity, price] = getTotQuantnPrice();
         setTotalQuantity(quantity);
         setTotalPrice(price)
-    }, [getTotQuantnPrice])
+    }, [getTotQuantnPrice()])
 
     const getTotPrice = () => {
         const sum = Number(totalPrice) + 1000
@@ -44,7 +43,8 @@ const OrderSummary: React.FC = () => {
             </div>
             <button className="mt-4 w-full text-sm font-medium tracking-wide text-white uppercase whitespace-nowrap" onClick={async () => {
                 const v = await submitOrder()
-                v && setOrderId(v)
+                if (v)
+                    setOrderId(v)
             }}>
                 <div className="self-stretch p-4 w-full rounded-lg bg-neutral-800 min-h-12">
                     Checkout
