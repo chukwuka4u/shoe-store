@@ -22,7 +22,7 @@ const ProductListing = () => {
         }
         , [])
     return (
-        <main className="flex flex-col max-w-[358px]">
+        <main className="flex flex-col">
             <div className="self-center w-full">
                 <BrandHeader
                     backgroundImageUrl={products ? products[0].image : loadingImage}
