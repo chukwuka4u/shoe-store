@@ -6,8 +6,8 @@ const ProductImageGallery = ({ img }: { img: string | StaticImageData }) => {
         <section className="product-gallery">
             <Image
                 src={img}
-                width={100}
-                height={100}
+                width={200}
+                height={200}
                 alt="ADIDAS 4DFWD X PARLEY RUNNING SHOES main view"
                 className="object-cover z-0 w-full rounded-2xl aspect-[1.21]"
             />

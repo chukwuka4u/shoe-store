@@ -31,7 +31,7 @@ export default function Drawer({ open, setOpen }: { open: boolean, setOpen: Reac
                                     </DialogTitle>
                                 </div>
                                 <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                                    <DrawerItems />
+                                    <DrawerItems setOpen={setOpen} />
                                 </div>
                             </div>
                             <TransitionChild>

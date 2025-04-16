@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Button";
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import Image from 'next/image'
 
 interface ProductCardProps {
@@ -21,7 +21,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
 
     const router = useRouter()
-
+    const pathname = usePathname();
+    const routeTitle = pathname.includes('/brand') ? 'brand' : ''
+    const bname = pathname.split('/').filter(Boolean).pop();
     return (
         <article className="flex-1 shrink basis-0">
             <div className="flex relative gap-2.5 px-1 pt-1 w-full text-xs font-semibold text-white whitespace-nowrap rounded-2xl bg-neutral-50 min-h-[180px]">
@@ -43,7 +45,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             <div className="mt-4 w-full">
                 <h3 className="text-base font-medium text-neutral-800">{title}</h3>
                 <div className="mt-2 w-full">
-                    <Button variant="secondary" onClick={() => router.push(`/detail/${id}`)}>
+                    <Button variant="secondary" onClick={() => router.push(`/detail/${id}?title=${routeTitle}&name=${bname}`)}>
                         view product -{" "}
                         <span style={{ color: "rgba(255,165,47,1)" }}>#{price}</span>
                     </Button>

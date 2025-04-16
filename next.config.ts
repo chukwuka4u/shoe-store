@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
         hostname: 'img.kwcdn.com',
         pathname: '/product/fancy/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.pinimg.com',
+        pathname: '/**',
+      },
     ]
   },
 };

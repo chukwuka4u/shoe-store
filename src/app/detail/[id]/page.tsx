@@ -6,12 +6,17 @@ import ProductActions from "@/components/detail/ProductActions";
 import ProductDescription from "@/components/detail/ProductDescription";
 import ProductImageGallery from "@/components/detail/ProductImage";
 import type { Product } from "@/lib/types/Product";
-import { getShoe } from "@/lib/config/firebase/app";
+import { getShoe, getBrandShoe } from "@/lib/config/firebase/app";
 import type { ProductOrder } from "@/lib/types/ProductOrder";
 import type { ShoeSizes } from "@/lib/types/ShoeSizes";
 import loadingImage from "assets/load_image.png"
+import { useSearchParams } from "next/navigation";
 
-const ProductDetailPage = ({ params, }: { params: Promise<{ id: string }> }) => {
+const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
+    const searchParams = useSearchParams();
+    const title = searchParams.get('title')
+    const name = searchParams.get('name')
+
     const [product, setProduct] = React.useState<Product | null>(null)
     const [size, setSize] = React.useState<ShoeSizes>(39)
     const productOrder: ProductOrder | null = product && {
@@ -24,11 +29,19 @@ const ProductDetailPage = ({ params, }: { params: Promise<{ id: string }> }) => 
     }
     React.useEffect(
         () => {
-            (async () => {
-                const { id } = await params
-                const prod = await getShoe(id) as Product
-                setProduct(prod)
-            })()
+            if (title == "brand")
+                (async () => {
+                    // console.log(title)
+                    const { id } = await params
+                    const prod = await getBrandShoe(name, id) as Product
+                    setProduct(prod)
+                })()
+            else
+                (async () => {
+                    const { id } = await params
+                    const prod = await getShoe(id) as Product
+                    setProduct(prod)
+                })()
         }
     )
     React.useEffect(() => console.log(size), [size])
@@ -40,12 +53,6 @@ const ProductDetailPage = ({ params, }: { params: Promise<{ id: string }> }) => 
             <SizeSelector setSize={setSize} />
             <ProductActions product={productOrder!} />
             <ProductDescription title={product ? product!.title : ""} />
-            {/* <section className="flex z-0 gap-1 justify-center items-start mt-6 w-full">
-                <div className="flex shrink-0 w-8 h-1 bg-indigo-500 rounded-lg" />
-                <div className="flex shrink-0 w-8 h-1 rounded-lg bg-neutral-800 bg-opacity-30" />
-                <div className="flex shrink-0 w-8 h-1 rounded-lg bg-neutral-800 bg-opacity-30" />
-                <div className="flex shrink-0 w-8 h-1 rounded-lg bg-neutral-800 bg-opacity-30" />
-            </section> */}
         </main >
     );
 };

@@ -1,7 +1,7 @@
 import type { ShoeSizes } from "./ShoeSizes";
 
 export interface ProductOrder {
-    id: string,
+    id?: string,
     image: string,
     label?: string,
     title: string,
