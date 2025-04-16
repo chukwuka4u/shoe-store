@@ -26,7 +26,7 @@ export default function Order() {
     useEffect(
         () => {
             (async () => {
-                const f = await fulfilled(params.id)
+                await fulfilled(params.id)
             })()
         }
         , [filled])

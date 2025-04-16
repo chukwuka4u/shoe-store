@@ -21,7 +21,7 @@ export default function DrawerItems({ setOpen }: { setOpen: React.Dispatch<React
             </button>
             <div className='flex flex-col'>
                 {
-                    brands.map((brand, indx) => <button onClick={() => {
+                    brands.map((brand, indx) => <button key={indx} onClick={() => {
                         router.push(`/brand/${brand}`)
                         setOpen(false)
                     }} className="flex w-full stretch gap-1 rounded-md py-1 px-3 data-[focus]:bg-white/10">

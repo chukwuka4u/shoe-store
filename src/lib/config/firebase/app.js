@@ -60,7 +60,7 @@ export const getOrder = async (id) => {
 
 export const fulfilled = async (id) => {
     const docRef = doc(db, "orders", id)
-    const docUpdate = await updateDoc(docRef, { fulfilled: true })
+    await updateDoc(docRef, { fulfilled: true })
 }
 
 export const getBrandShoes = async (name) => {
