@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CartContextProvider>
-          <main className="overflow-hidden px-4 pt-6 pb-2.5 mx-auto w-full bg-stone-200 max-md:max-w-[480px]">
+          <main className="overflow-hidden px-2 pb-2.5 mx-auto w-full bg-stone-200 max-md:max-w-[480px]">
             <MainHeader />
             {children}
             <Footer />

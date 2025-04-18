@@ -9,7 +9,7 @@ const ProductGrid: React.FC = () => {
         () => {
             //test that firebase is working!!
             (async () => {
-                const shoes: Product[] = await getShoes() as Product[]
+                const shoes: Product[] = await getShoes(4) as Product[]
 
                 setProducts(shoes)
             })()
@@ -24,8 +24,7 @@ const ProductGrid: React.FC = () => {
                         key={index}
                         id={product.id}
                         image={product.image}
-                        label={product.label}
-                        labelColor={product.labelColor}
+                        label={"new"}
                         title={product.title}
                         price={product.price}
                     />

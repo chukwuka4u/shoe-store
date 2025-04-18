@@ -9,48 +9,37 @@ const HeroSection: React.FC = () => {
                 Do it <span style={{ color: "rgba(74,105,226,1)" }}>right</span>
             </h1>
             <div className="mt-6 w-full">
-                <div className="flex relative flex-col items-start py-5 pr-4 w-full rounded-3xl aspect-[0.937]">
-                    <img
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/0f6f8c4211b803f0fba39961bf46ee564caf5824ccfcab28c620ab470d49040e?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
+                <div className="flex relative flex-col items-start py-5 pr-4 w-full rounded-3xl aspect-[0.837]">
+                    <Image
+                        src="https://i.pinimg.com/736x/8a/cd/19/8acd19fd588395f02a2ba0f5e6328a99.jpg"
                         alt="Nike Air Max featured product"
                         width={100}
                         height={100}
                         className="object-cover absolute inset-0 size-full"
                     />
-                    <div className="flex relative gap-7 mt-12 ml-4">
-                        <div className="self-end mt-8">
+                    <div className="flex relative gap-7 mt-12 ml-4 mr-15">
+                        <div className="self-end mt-8 pb-10 pt-1 px-1">
                             <div className="w-full font-semibold">
-                                <h2 className="text-2xl text-white">UP YOUR SHOE GAME</h2>
-                                <p className="text-sm text-stone-200">
-                                    GritAndSole introducing the best of men shoes, comfort and style
+                                <h2 className="text-2xl text-stone-200">UP YOUR SHOE GAME</h2>
+                                <p className="text-sm text-stone-300 text-light">
+                                    GritandSole gets you the best of footwears with vast variety of designs
+                                    so you shop according to your taste
                                 </p>
                             </div>
-                            <div className="mt-2 w-28 max-w-full">
-                                <Button variant="primary" size="small">
+                            <div className="mt-8 w-28 max-w-full">
+                                <Button variant="primary" size="small" onClick={() => window.scrollTo({
+                                    top: 600,
+                                    left: 0,
+                                    behavior: "smooth",
+                                })}>
                                     Shop Now
                                 </Button>
                             </div>
                         </div>
-                        <div>
-                            <Image
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/fd3927985a56c17c7ab7e2a3577fecaca660cdcf7a0baf52c4869e476eb74439?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
-                                alt="Nike shoe thumbnail 1"
-                                width={100}
-                                height={100}
-                                className="object-contain w-16 aspect-square"
-                            />
-                            <Image
-                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/84d088bc3e1ed982850edfa6346200a401b5f23ae2eff225662693626dbfc958?placeholderIfAbsent=true&apiKey=d9a7767b77bf421d8f4999f03a5d17d1"
-                                alt="Nike shoe thumbnail 2"
-                                width={100}
-                                height={100}
-                                className="object-contain mt-2 w-16 aspect-square"
-                            />
-                        </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </header >
     );
 };
 

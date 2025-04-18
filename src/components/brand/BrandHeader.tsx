@@ -23,12 +23,12 @@ const BrandHeader: React.FC<PromoBannerProps> = ({
                 alt="Promotional background"
                 className="object-cover absolute inset-0 size-full rounded-2xl"
             />
-            <div className="relative max-w-full w-[213px]">
+            <div className="relative max-w-full w-[213px] p-3 bg-white/30 rounded-xl">
                 <div className="w-full">
-                    <p className="text-xs text-stone-200">{tagline}</p>
+                    <p className="text-xs text-stone-300">{tagline}</p>
                     <h2 className="text-xl font-semibold text-white">{title}</h2>
                 </div>
-                <p className="mt-1 text-xs text-stone-200">{description}</p>
+                <p className="mt-1 text-xs text-stone-300">{description}</p>
             </div>
         </section>
     );

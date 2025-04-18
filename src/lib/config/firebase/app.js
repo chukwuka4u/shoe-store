@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app';
 // import { getStorage } from 'firebase/storage';
 // import { getAuth } from 'firebase/auth';
 import firebaseConfig from '@/lib/utils/firebaseConfig';
-import { getFirestore, collection, getDocs, doc, getDoc, addDoc, updateDoc } from 'firebase/firestore/lite';
+import { getFirestore, collection, getDocs, doc, getDoc, addDoc, updateDoc, query, orderBy, limit } from 'firebase/firestore/lite';
 
 const app = initializeApp(firebaseConfig);
 
@@ -10,9 +10,10 @@ export const db = getFirestore(app);
 // export const storage = getStorage(app);
 // export const auth = getAuth(app);
 
-export const getShoes = async () => {
+export const getShoes = async (l) => {
     const shoeCol = collection(db, "shoes")
-    const docsSnapshot = await getDocs(shoeCol)
+    const q = l ? query(shoeCol, orderBy("title", "desc"), limit(l)) : shoeCol;
+    const docsSnapshot = await getDocs(q)
     const shoeList = docsSnapshot.docs.map((doc) => {
         const { id } = doc;
         const obj = doc.data()

@@ -3,19 +3,16 @@ import React from "react";
 import BrandHeader from "@/components/brand/BrandHeader";
 import SectionHeader from "@/components/brand/SectionHeader";
 import { Product } from "@/lib/types/Product";
-import { getBrandShoes } from "@/lib/config/firebase/app";
+import { getShoes } from "@/lib/config/firebase/app";
 import ProductCard from "@/components/home/ProductCard";
 import loadingImage from "assets/load_image.png"
-import { useParams } from "next/navigation";
 
 const ProductListing = () => {
-
-    const { name } = useParams()
     const [products, setProducts] = React.useState<Product[] | null>(null)
     React.useEffect(
         () => {
             (async () => {
-                const shoes: Product[] = await getBrandShoes(name) as Product[]
+                const shoes: Product[] = await getShoes() as Product[]
 
                 setProducts(shoes)
             })()
@@ -27,8 +24,8 @@ const ProductListing = () => {
                 <BrandHeader
                     backgroundImageUrl={products ? products[0].image : loadingImage}
                     tagline="Limited time only"
-                    title="Get 10% off"
-                    description="Loafers made with your comfort in mind so you can put all of your focus into your best look."
+                    title="Get The Best of"
+                    description="Sneakers made with your comfort in mind so you can put all of your focus into your next session."
                 />
             </div>
 
@@ -38,7 +35,7 @@ const ProductListing = () => {
             </div> */}
 
             <div className="mt-6 w-full">
-                <SectionHeader title={name!.toString().toLocaleUpperCase() + " Shoes"} itemCount={products?.length ?? 0} />
+                <SectionHeader title="New Shoes" itemCount={products?.length ?? 0} />
                 <section className="w-full">
                     <div className="grid grid-cols-2 gap-4 items-start mt-6 w-full">
                         {products ? products.map((product, index) => (
@@ -46,8 +43,7 @@ const ProductListing = () => {
                                 key={index}
                                 id={product.id}
                                 image={product.image}
-                                label={product.label}
-                                labelColor={product.labelColor}
+                                label={"new"}
                                 title={product.title}
                                 price={product.price}
                             />
@@ -67,4 +63,3 @@ const ProductListing = () => {
 };
 
 export default ProductListing;
-
