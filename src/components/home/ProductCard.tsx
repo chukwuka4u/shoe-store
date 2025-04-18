@@ -16,7 +16,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
     id,
     image,
     label,
-    labelColor,
     title,
     price,
 }) => {
