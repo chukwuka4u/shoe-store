@@ -9,7 +9,7 @@ export default function MyModal({ id }: { id: string }) {
     }
 
     function copyToClipboard() {
-        const textToCopy = "gritandsole.vercel.app/order/" + id;
+        const textToCopy = "https://gritandsole.vercel.app/order/" + id;
         navigator.clipboard.writeText(textToCopy)
             .then(() => {
                 alert("Text copied to clipboard!");

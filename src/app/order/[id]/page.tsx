@@ -48,20 +48,23 @@ export default function Order() {
                     <div>LOADING...</div>
                 }
             </div>
-            <div className="flex flex-row justify-between">
-                <h3>FULFILLED --</h3>
-                <button onClick={(() => setFilled(true))}>
-                    {
-                        filled ?
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                            </svg>
-                            :
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                            </svg>
-                    }
-                </button>
+            <div className="fixed bottom-0 w-screen bg-white p-1 z-10 rounded-t-2xl shadow-xl">
+                <div className="pt-2">FOR STAFF ONLY ⬇️</div>
+                <div className="flex flex-row justify-between">
+                    <h3>FULFILLED --</h3>
+                    <button className="rounded-full border-1 hover:bg-slate-500" onClick={(() => setFilled(true))}>
+                        {
+                            filled ?
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                                :
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                        }
+                    </button>
+                </div>
             </div>
         </section>
     );
