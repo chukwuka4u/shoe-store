@@ -49,6 +49,9 @@ const Footer = () => {
                             <li className="mt-2">
                                 <a href="/privacy">Privacy Policy</a>
                             </li>
+                            <li className="mt-2">
+                                <a href="/how_to">How to Use the Store</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -56,7 +59,7 @@ const Footer = () => {
                 <div className="mt-6">
                     <h3 className="text-xl font-medium text-orange-400">Follow us</h3>
                     <div className="flex gap-4 items-start mt-4">
-                        <a href="#" aria-label="Pinterest">
+                        <a href="https://www.pinterest.com/chukwukagns/" aria-label="Pinterest">
                             <Image
                                 src={pinterestlogo}
                                 width={100}
@@ -65,7 +68,7 @@ const Footer = () => {
                                 className="object-cover overflow-hidden shrink-0 w-6 aspect-square rounded-full"
                             />
                         </a>
-                        <a href="#" aria-label="Instagram">
+                        <a href="https://www.instagram.com/gritandsoleshoes?igsh=YzljYTk1ODg3Zg==" aria-label="Instagram">
                             <Image
                                 src={instagramlogo}
                                 width={100}
@@ -74,12 +77,12 @@ const Footer = () => {
                                 className="object-cover overflow-hidden shrink-0 w-6 aspect-square rounded-full"
                             />
                         </a>
-                        <a href="#" aria-label="YouTube">
+                        <a href="https://chat.whatsapp.com/GcoGPuB6aeeCF3sDA6bZ9L" aria-label="WhatsApp">
                             <Image
                                 src={whatsapplogo}
                                 width={100}
                                 height={100}
-                                alt="YouTube"
+                                alt="WhatsApp"
                                 className="object-cover overflow-hidden shrink-0 w-6 aspect-square rounded-full"
                             />
                         </a>

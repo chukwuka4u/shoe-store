@@ -50,7 +50,9 @@ export default function MyModal({ id }: { id: string }) {
                                     </div>
                                 </Button>
                             </div>
-
+                            <div>
+                                <p className="mt-4 decoration-auto decoration-solid">After coping order link <span className="underline underline-offset-auto text-[rgba(74,105,226,1)]"><a href="wa.me/08164752529"> Start Chatting with Us </a></span> to finish making your order</p>
+                            </div>
                         </DialogPanel>
                     </div>
                 </div>

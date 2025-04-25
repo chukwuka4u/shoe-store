@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
                     <Image
                         src="https://i.pinimg.com/736x/8a/cd/19/8acd19fd588395f02a2ba0f5e6328a99.jpg"
                         alt="Nike Air Max featured product"
-                        width={200}
+                        width={400}
                         height={500}
                         className="object-cover absolute inset-0 size-full"
                     />
