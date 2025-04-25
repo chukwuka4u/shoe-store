@@ -33,7 +33,7 @@ const HowToPage: React.FC = () => {
                             />
                         </span>
                         clicking the logo anyway would take you back to the home page. click the menu at the top left to open menu bar and view brands
-                        click the cart/bag icon at the top right to open your cart. click the "SHOP NOW" button to scroll quickly to new products
+                        click the cart/bag icon at the top right to open your cart. click the SHOP NOW button to scroll quickly to new products
                     </li>
                     <li>
                         <span className="font-bold">New drops:</span>
@@ -46,7 +46,7 @@ const HowToPage: React.FC = () => {
                                 className="w-full p-2"
                             />
                         </span>
-                        still on the home page if you scroll down, you find the new drops section, click "SHOP NEW DROPS" to view all new drops
+                        still on the home page if you scroll down, you find the new drops section, click SHOP NEW DROPS to view all new drops
                     </li>
                     <li>
                         <span className="font-bold">Menu and Brands:</span>
@@ -85,7 +85,7 @@ const HowToPage: React.FC = () => {
                                 className="w-full p-2"
                             />
                         </span>
-                        after selecting what you want, view your cart adjust setting as you want and click the "checkout" button
+                        after selecting what you want, view your cart adjust setting as you want and click the checkout button
                     </li>
                     <li>
                         <span className="font-bold">CheckOut:</span>
