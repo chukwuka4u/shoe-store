@@ -102,7 +102,7 @@ const HowToPage: React.FC = () => {
                     </li>
                     <li>
                         <span className="font-bold">Finally:</span>
-                        send your url to our <span className="underline underline-offset-auto text-[rgba(74,105,226,1)]"><a href="wa.me/08164752529">whatsapp vendor </a></span>, who will communicate with you details about your order.
+                        send your url to our <span className="underline underline-offset-auto text-[rgba(74,105,226,1)]"><a href="https://wa.me/08164752529">whatsapp vendor </a></span>, who will communicate with you details about your order.
 
                     </li>
                 </ol>
