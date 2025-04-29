@@ -6,6 +6,7 @@ export default function DrawerItems({ setOpen }: { setOpen: React.Dispatch<React
         "dior",
         "dng",
         "fendi",
+        "givenchy",
         "gucci",
         "nike",
         "prada",

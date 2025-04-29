@@ -51,7 +51,7 @@ const OrderSummary: React.FC = () => {
                 </div>
             </button>
             <div>
-                <p className="mt-4 decoration-auto decoration-solid">After coping order link <span className="underline underline-offset-auto text-[rgba(74,105,226,1)]"><a href="wa.me/08164752529"> Start Chatting with Us </a></span> to finish making your order</p>
+                <p className="mt-4 decoration-auto decoration-solid">After coping order link <span className="underline underline-offset-auto text-[rgba(74,105,226,1)]"><a href="https://wa.me/08164752529"> Start Chatting with Us </a></span> to finish making your order</p>
             </div>
             {
                 orderId && <MyModal id={orderId} />
