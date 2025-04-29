@@ -10,12 +10,12 @@ import { useParams } from "next/navigation";
 
 const ProductListing = () => {
 
-    const { name } = useParams()
+    const { name }: { name: string } = useParams()
     const [products, setProducts] = React.useState<Product[] | null>(null)
     React.useEffect(
         () => {
             (async () => {
-                const shoes: Product[] = await getBrandShoes(name) as Product[]
+                const shoes: Product[] = await getBrandShoes(name.replaceAll("%20", " ")) as Product[]
 
                 setProducts(shoes)
             })()
@@ -38,7 +38,7 @@ const ProductListing = () => {
             </div> */}
 
             <div className="mt-6 w-full">
-                <SectionHeader title={name!.toString().toLocaleUpperCase() + " Shoes"} itemCount={products?.length ?? 0} />
+                <SectionHeader title={name!.replaceAll("%20", " ").toLocaleUpperCase() + " Shoes"} itemCount={products?.length ?? 0} />
                 <section className="w-full">
                     <div className="grid grid-cols-2 gap-4 items-start mt-6 w-full">
                         {products ? products.map((product, index) => (

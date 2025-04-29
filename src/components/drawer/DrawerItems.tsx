@@ -8,9 +8,11 @@ export default function DrawerItems({ setOpen }: { setOpen: React.Dispatch<React
         "fendi",
         "givenchy",
         "gucci",
+        "louis vitton",
         "nike",
         "prada",
-        "puma"
+        "puma",
+        "timberland"
     ]
     const router = useRouter();
 
