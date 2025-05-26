@@ -1,0 +1,85 @@
+'use client'
+import Button from "@/components/Button";
+import InputField from "@/components/InputFields";
+import { logIn, signInWithGoogle } from "@/lib/config/firebase/auth";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation"
+import { auth } from "@/lib/config/firebase/auth"
+
+export default function SignUp() {
+    const router = useRouter();
+    const [loggedIn, setLoggedIn] = useState(false)
+
+    const [form, setForm] = useState({
+        email: "",
+        password: "",
+    })
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            router.push("/")
+            console.log(auth.currentUser)
+        }, 5000);
+
+        return () => clearTimeout(timeoutId);
+    }, [loggedIn]);
+
+    function submit() {
+        if (form.email == "" || form.password == "") {
+            window.alert("Please fill all input fields")
+            return;
+        }
+        else {
+            logIn(form)
+            setLoggedIn(true)
+        }
+    }
+
+
+    return (
+        <div>
+            <p>Login</p>
+            <p className="underline">Forgot your password?</p>
+            <section>
+                <InputField
+                    placeholder="Email"
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    name="email"
+                    required={true}
+                    type="text"
+                />
+                <InputField
+                    placeholder="Password"
+                    value={form.password}
+                    onChange={(e) => setForm({ ...form, password: e.target.value })}
+                    name="password"
+                    required={true}
+                    type="text"
+                />
+            </section>
+            <section>
+                <div className="flex flex-row justify-evenly">
+                    <input
+                        type="checkbox"
+                        value=""
+                    />
+                    <p>Keep me logged in - applies to all log in options below. More info</p>
+                </div>
+            </section>
+            <Button
+                variant="secondary"
+                size="large"
+                children={<p>EMAIL LOGIN</p>}
+                onClick={() => submit()}
+            />
+
+            <button onClick={() => {
+                signInWithGoogle()
+                router.push("/")
+            }}>
+                SIGN IN WITH GOOGLE
+            </button>
+        </div>
+    )
+}

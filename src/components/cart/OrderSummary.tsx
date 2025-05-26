@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation"
 import { useCartContext } from '@/lib/providers/cart-provider'
 import MyModal from "../order/modal";
+import { auth } from "@/lib/config/firebase/auth";
 
 const OrderSummary: React.FC = () => {
 
@@ -18,6 +20,19 @@ const OrderSummary: React.FC = () => {
     const getTotPrice = () => {
         const sum = Number(totalPrice) + 1000
         return (totalPrice ? sum : 0)
+    }
+    const router = useRouter();
+    async function handleCheckout() {
+        if (auth.currentUser) {
+
+            router.push("/cart/checkout")
+        }
+        else {
+
+            const v = await submitOrder()
+            if (v)
+                setOrderId(v)
+        }
     }
 
     return (
@@ -42,9 +57,7 @@ const OrderSummary: React.FC = () => {
                 </div>
             </div>
             <button className="mt-4 w-full text-sm font-medium tracking-wide text-white uppercase whitespace-nowrap" onClick={async () => {
-                const v = await submitOrder()
-                if (v)
-                    setOrderId(v)
+                handleCheckout();
             }}>
                 <div className="self-stretch p-4 w-full rounded-lg bg-neutral-800 min-h-12">
                     Checkout

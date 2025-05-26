@@ -5,7 +5,6 @@ import CartContextProvider from "@/lib/providers/cart-provider";
 import Footer from "@/components/Footer";
 import MainHeader from "@/components/Header";
 
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],

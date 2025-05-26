@@ -6,6 +6,9 @@ import CartHeader from "./cart/CartHeader";
 import Drawer from "./drawer/Drawer";
 import Image from "next/image"
 import logo from "assets/group_10.png"
+import { auth } from "@/lib/config/firebase/auth"
+import UserModal from "./popover/UserModal";
+import AuthModal from "./popover/AuthModal";
 
 
 const Header = () => {
@@ -18,11 +21,17 @@ const Header = () => {
             <header className="flex justify-between items-center p-3 w-full rounded-xl bg-neutral-50 mb-2">
                 <button onClick={() => { setOpen(true); console.log("clicked") }}>
                     <div className="flex flex-row text-sm font-semibold whitespace-nowrap text-neutral-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="0.8" stroke="currentColor" className="size-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="0.5" stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </div>
                 </button>
+                {
+                    auth.currentUser ?
+                        <UserModal email={auth.currentUser.email!} />
+                        :
+                        <AuthModal />
+                }
                 <button className="pl-5" onClick={() => router.push('/')}>
                     <Image
                         src={logo}

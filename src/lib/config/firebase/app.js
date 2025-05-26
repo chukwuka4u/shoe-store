@@ -1,14 +1,10 @@
 import { initializeApp } from 'firebase/app';
-// import { getStorage } from 'firebase/storage';
-// import { getAuth } from 'firebase/auth';
 import firebaseConfig from '@/lib/utils/firebaseConfig';
-import { getFirestore, collection, getDocs, doc, getDoc, addDoc, updateDoc, query, orderBy, limit } from 'firebase/firestore/lite';
+import { getFirestore, collection, getDocs, doc, getDoc, setDoc, addDoc, updateDoc, query, orderBy, limit } from 'firebase/firestore/lite';
 
 const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
-// export const storage = getStorage(app);
-// export const auth = getAuth(app);
 
 export const getShoes = async (l) => {
     const shoeCol = collection(db, "shoes")
@@ -86,4 +82,18 @@ export const getBrandShoe = async (name, id) => {
     } else {
         console.log("No such document!");
     }
+}
+
+export const saveUserDetails = async (uid, form) => {
+    await setDoc(doc(db, 'users', uid), {
+        firstName: form.firstName,
+        lastName: form.lastName,
+        gender: form.gender,
+        email: form.email
+    });
+}
+export const getUserDetails = async (uid) => {
+    const dataSnapshot = await getDoc(doc(db, 'users', uid));
+    const data = dataSnapshot.data()
+    return ({ ...data })
 }
