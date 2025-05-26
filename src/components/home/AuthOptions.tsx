@@ -6,7 +6,7 @@ export default function AuthOptions() {
                     wanna get the full gns experience? <a className="underline text-blue-500" href="/auth/signin">Sign In</a>
                 </p>
                 <p>OR</p>
-                <p> <a className="underline text-blue-500" href="/auth/signup">Sign Up</a> if you don't have an account </p>
+                <p> <a className="underline text-blue-500" href="/auth/signup">Sign Up</a> if you dont have an account </p>
                 <ol>
                     <li>get access to:</li>
                     <li>personalization: save your orders, save your favorite products, access to newsletter</li>

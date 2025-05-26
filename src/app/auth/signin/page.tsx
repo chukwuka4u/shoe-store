@@ -70,9 +70,9 @@ export default function SignUp() {
             <Button
                 variant="secondary"
                 size="large"
-                children={<p>EMAIL LOGIN</p>}
-                onClick={() => submit()}
-            />
+                onClick={() => submit()}>
+                <p>EMAIL LOGIN</p>
+            </Button>
 
             <button onClick={() => {
                 signInWithGoogle()

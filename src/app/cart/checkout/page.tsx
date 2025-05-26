@@ -11,7 +11,7 @@ import { useCartContext } from "@/lib/providers/cart-provider"
 import MyModal from "@/components/checkout/modal";
 
 
-type TransferProps = Object & {
+type TransferProps = object & {
     quantity: number,
     amount: number,
     email: string,
@@ -22,7 +22,6 @@ type TransferProps = Object & {
 }
 export default function SignUp() {
     const { getTotQuantnPrice } = useCartContext();
-    const router = useRouter()
     const [showModal, setShowModal] = useState(false)
     const [form, setForm] = useState<TransferProps>({
         quantity: 0,
@@ -51,8 +50,17 @@ export default function SignUp() {
             return;
         }
         else {
-            const response = await payWithTransfer(form)
-            console.log(response)
+            try {
+                const response = await payWithTransfer(form)
+                console.log(response)
+            }
+            catch (e) {
+                console.error(e)
+            }
+            finally {
+                setShowModal(true)
+            }
+
         }
     }
 
@@ -93,9 +101,9 @@ export default function SignUp() {
             <Button
                 variant="secondary"
                 size="small"
-                children={<p>PROCEED</p>}
-                onClick={() => submit()/*setShowModal(true)*/}
-            />
+                onClick={() => submit()/*setShowModal(true)*/}>
+                <p>PROCEED</p>
+            </Button>
             {
                 showModal && <MyModal transferObj={Object()} />
             }

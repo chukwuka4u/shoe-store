@@ -1,5 +1,5 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
-import { Key, useState } from 'react'
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Key, useEffect, useState } from 'react'
 
 export default function MyModal({ transferObj }: { transferObj: Object }) {
     const [isOpen, setIsOpen] = useState(true)
@@ -15,7 +15,7 @@ export default function MyModal({ transferObj }: { transferObj: Object }) {
         transfer_note: "Mock note",
         transfer_amount: "10000.00"
     }
-
+    useEffect(() => console.log(transferObj), [])
     return (
         <>
             <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={close} __demoMode>
