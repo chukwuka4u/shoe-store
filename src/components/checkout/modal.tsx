@@ -30,7 +30,7 @@ export default function MyModal({ transferObj }: { transferObj: object }) {
                             </DialogTitle>
                             <div>
                                 <ol>
-                                    {Object.entries(ls).map(([key, value]: [key: Key, value: String], indx: Key) =>
+                                    {Object.entries(ls).map(([key, value]: [key: Key, value: string], indx: Key) =>
                                         <li key={indx} className='flex flex-row justify-between text-sm py-2'>
                                             <p>{key} :</p>
                                             <p>{value}</p>
