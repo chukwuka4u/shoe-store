@@ -2,27 +2,16 @@
 import Button from "@/components/Button";
 import InputField from "@/components/InputFields";
 import { logIn, signInWithGoogle } from "@/lib/config/firebase/auth";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation"
-import { auth } from "@/lib/config/firebase/auth"
 
 export default function SignUp() {
     const router = useRouter();
-    const [loggedIn, setLoggedIn] = useState(false)
 
     const [form, setForm] = useState({
         email: "",
         password: "",
     })
-
-    useEffect(() => {
-        const timeoutId = setTimeout(() => {
-            router.push("/")
-            console.log(auth.currentUser)
-        }, 5000);
-
-        return () => clearTimeout(timeoutId);
-    }, [loggedIn]);
 
     function submit() {
         if (form.email == "" || form.password == "") {
@@ -31,7 +20,7 @@ export default function SignUp() {
         }
         else {
             logIn(form)
-            setLoggedIn(true)
+            // setLoggedIn(true)
         }
     }
 
