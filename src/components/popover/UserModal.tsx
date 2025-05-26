@@ -1,4 +1,4 @@
-import { Popover, PopoverButton, PopoverPanel, useClose } from '@headlessui/react'
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { logOut } from '@/lib/config/firebase/auth'
 import { useRouter } from "next/navigation"
 

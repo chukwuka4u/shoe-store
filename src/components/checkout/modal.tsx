@@ -1,7 +1,7 @@
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { Key, useEffect, useState } from 'react'
 
-export default function MyModal({ transferObj }: { transferObj: Object }) {
+export default function MyModal({ transferObj }: { transferObj: object }) {
     const [isOpen, setIsOpen] = useState(true)
 
     function close() {
@@ -30,7 +30,7 @@ export default function MyModal({ transferObj }: { transferObj: Object }) {
                             </DialogTitle>
                             <div>
                                 <ol>
-                                    {Object.entries(ls).map(([key, value]: any, indx: Key) =>
+                                    {Object.entries(ls).map(([key, value]: [key: Key, value: String], indx: Key) =>
                                         <li key={indx} className='flex flex-row justify-between text-sm py-2'>
                                             <p>{key} :</p>
                                             <p>{value}</p>

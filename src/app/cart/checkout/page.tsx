@@ -6,7 +6,6 @@ import { auth } from "@/lib/config/firebase/auth";
 import { payWithTransfer } from "@/lib/config/flutterwave/app"
 import { useEffect, useState } from "react";
 import { uid } from "uid"
-import { useRouter } from "next/navigation"
 import { useCartContext } from "@/lib/providers/cart-provider"
 import MyModal from "@/components/checkout/modal";
 

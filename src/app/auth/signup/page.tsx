@@ -104,7 +104,7 @@ export default function SignUp() {
                         type="checkbox"
                         value=""
                     />
-                    <p>By clicking 'Log In' you agree to our website gritandsole Terms & Conditions, Privacy Policy</p>
+                    <p>By clicking SignUp you agree to our website gritandsole Terms & Conditions, Privacy Policy</p>
                 </div>
                 <div className="flex flex-row justify-evenly">
                     <input
@@ -117,9 +117,9 @@ export default function SignUp() {
             <Button
                 variant="secondary"
                 size="large"
-                children={<p>REGISTER</p>}
-                onClick={() => submit()}
-            />
+                onClick={() => submit()}>
+                <p>REGISTER</p>
+            </Button>
         </div>
     )
 }
