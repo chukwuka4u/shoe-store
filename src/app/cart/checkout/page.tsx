@@ -6,7 +6,7 @@ import { auth } from "@/lib/config/firebase/auth";
 import { useEffect, useState } from "react";
 import { uid } from "uid"
 import { useCartContext } from "@/lib/providers/cart-provider"
-import MyModal from "@/components/checkout/modal";
+// import MyModal from "@/components/checkout/modal";
 import { initiatePayment } from "@/lib/config/paystack/app"
 // import { useRouter } from "next/navigation";
 import { comeback } from "@/components/checkout/popup"
