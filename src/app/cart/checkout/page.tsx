@@ -8,7 +8,7 @@ import { uid } from "uid"
 import { useCartContext } from "@/lib/providers/cart-provider"
 import MyModal from "@/components/checkout/modal";
 import { initiatePayment } from "@/lib/config/paystack/app"
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { comeback } from "@/components/checkout/popup"
 
 
@@ -23,7 +23,7 @@ type TransferProps = object & {
 }
 export default function CheckOut() {
     const { getTotQuantnPrice } = useCartContext();
-    const [showModal, setShowModal] = useState(false)
+    // const [showModal, setShowModal] = useState(false)
     const [form, setForm] = useState<TransferProps>({
         quantity: 0,
         amount: 0,
@@ -33,7 +33,7 @@ export default function CheckOut() {
         fullname: "",
         phone_number: "",
     })
-    const router = useRouter()
+    // const router = useRouter()
 
     useEffect(() => {
         //get email from user
@@ -108,9 +108,9 @@ export default function CheckOut() {
                 onClick={() => submit()}>
                 <p>PROCEED</p>
             </Button>
-            {
+            {/* {
                 showModal && <MyModal transferObj={Object()} />
-            }
+            } */}
         </div>
     )
 }

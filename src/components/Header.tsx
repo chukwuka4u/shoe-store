@@ -7,8 +7,8 @@ import Drawer from "./drawer/Drawer";
 import Image from "next/image"
 import logo from "assets/group_10.png"
 // import { auth } from "@/lib/config/firebase/auth"
-import UserModal from "./popover/UserModal";
-import AuthModal from "./popover/AuthModal";
+// import UserModal from "./popover/UserModal";
+// import AuthModal from "./popover/AuthModal";
 
 
 const Header = () => {
