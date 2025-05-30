@@ -4,6 +4,7 @@ import React from "react";
 import HeroSection from "../components/home/HeroSection";
 import ProductGrid from "../components/home/ProductGrid";
 import NewDropsSection from "@/components/home/NewDropsSection";
+import AllBrands from "@/components/home/AllBrands";
 // import AuthOptions from "@/components/home/AuthOptions"
 
 const HomePage: React.FC = () => {
@@ -14,6 +15,7 @@ const HomePage: React.FC = () => {
       {/* <AuthOptions /> */}
       <NewDropsSection />
       <ProductGrid />
+      <AllBrands />
     </section>
 
   );

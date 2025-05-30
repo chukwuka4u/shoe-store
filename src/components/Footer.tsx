@@ -10,8 +10,9 @@ const Footer = () => {
             <div className="z-0 w-full font-medium">
                 <h2 className="text-2xl text-orange-400">About us</h2>
                 <p className="mt-1 text-base text-stone-200">
-                    We are the future biggest hyperstore in the universe. We got you covered
-                    with our exclusive collections and latest drops.
+                    we are a retail brand dedicated to serving all your footwear needs, we offer branded loafers and sneakers
+                    of brands like gucci, prada, nike, adidas and others. check the menu to view all brands. all orders are met within 7 days.
+                    delivery is currently only in port harcourt and owerri.
                 </p>
             </div>
 

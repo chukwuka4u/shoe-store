@@ -3,11 +3,13 @@ import Button from "@/components/Button";
 import InputField from "@/components/InputFields";
 import { getUserDetails } from "@/lib/config/firebase/app";
 import { auth } from "@/lib/config/firebase/auth";
-import { payWithTransfer } from "@/lib/config/flutterwave/app"
 import { useEffect, useState } from "react";
 import { uid } from "uid"
 import { useCartContext } from "@/lib/providers/cart-provider"
 import MyModal from "@/components/checkout/modal";
+import { initiatePayment } from "@/lib/config/paystack/app"
+import { useRouter } from "next/navigation";
+import { comeback } from "@/components/checkout/popup"
 
 
 type TransferProps = object & {
@@ -19,7 +21,7 @@ type TransferProps = object & {
     fullname: string,
     phone_number?: string
 }
-export default function SignUp() {
+export default function CheckOut() {
     const { getTotQuantnPrice } = useCartContext();
     const [showModal, setShowModal] = useState(false)
     const [form, setForm] = useState<TransferProps>({
@@ -31,6 +33,7 @@ export default function SignUp() {
         fullname: "",
         phone_number: "",
     })
+    const router = useRouter()
 
     useEffect(() => {
         //get email from user
@@ -50,15 +53,17 @@ export default function SignUp() {
         }
         else {
             try {
-                const response = await payWithTransfer(form)
-                console.log(response)
+                const response = await initiatePayment();
+                console.log(response.data.authorization_url)
+                comeback(response.data.authorization_url)
+
             }
             catch (e) {
                 console.error(e)
             }
-            finally {
-                setShowModal(true)
-            }
+            // finally {
+            //     setShowModal(true)
+            // }
 
         }
     }
@@ -100,7 +105,7 @@ export default function SignUp() {
             <Button
                 variant="secondary"
                 size="small"
-                onClick={() => submit()/*setShowModal(true)*/}>
+                onClick={() => submit()}>
                 <p>PROCEED</p>
             </Button>
             {
