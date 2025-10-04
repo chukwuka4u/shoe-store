@@ -9,7 +9,8 @@ async function initiatePayment() {
         },
         body: JSON.stringify({
             email: "chukwuka@email.com",
-            amount: "50000"
+            amount: "50000",
+            clallback_url: "https://gritandsole.vercel.app/history"
         })
     })
     const data = await response.json();

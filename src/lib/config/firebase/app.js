@@ -97,3 +97,17 @@ export const getUserDetails = async (uid) => {
     const data = dataSnapshot.data()
     return ({ ...data })
 }
+
+export const saveOrderHistory = async (uid, orderId) => {
+    const postsRef = collection(db, `users/${uid}/history`)
+    const result = await addDoc(postsRef, {
+        orderId,
+        date: "",
+        time: "",
+        paidFor: true,
+        expectedDeliveryDate: ""
+    })
+    return result ? true : false;
+}
+//on paying sucessful, save history,
+//

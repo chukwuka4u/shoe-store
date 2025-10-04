@@ -6,15 +6,15 @@ import whatsapplogo from "assets/whatsapp_logo.jpg"
 
 const Footer = () => {
     return (
-        <footer className="overflow-hidden w-full px-4 pt-6 pb-28 rounded-3xl bg-neutral-800 min-h-[720px] mt-6 max-w-[480px]">
-            <div className="z-0 w-full font-medium">
+        <footer className="overflow-hidden w-full px-4 pt-4 pb-28 rounded-3xl bg-neutral-800 min-h-[720px] mt-6 max-w-[480px]">
+            {/* <div className="z-0 w-full font-medium">
                 <h2 className="text-2xl text-orange-400">About us</h2>
                 <p className="mt-1 text-base text-stone-200">
                     we are a retail brand dedicated to serving all your footwear needs, we offer branded loafers and sneakers
                     of brands like gucci, prada, nike, adidas and others. check the menu to view all brands. all orders are met within 7 days.
                     delivery is currently only in port harcourt and owerri.
                 </p>
-            </div>
+            </div> */}
 
             <div className="flex z-0 flex-col items-start mt-10 w-full">
                 <div className="flex flex-col font-medium whitespace-nowrap">

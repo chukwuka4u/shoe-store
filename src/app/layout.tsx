@@ -4,6 +4,7 @@ import "./globals.css";
 import CartContextProvider from "@/lib/providers/cart-provider";
 import Footer from "@/components/Footer";
 import MainHeader from "@/components/Header";
+import ProgressProvider from "@/lib/providers/progress-provider";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -24,6 +25,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
+
   return (
     <html lang="en">
       <body
@@ -31,10 +36,12 @@ export default function RootLayout({
       >
         <CartContextProvider>
           <main className="overflow-hidden px-2 pb-2.5 mx-auto w-full bg-stone-200 max-md:max-w-[480px]">
-            <MainHeader />
-            {children}
-            <Footer />
-            <div className="flex absolute z-0 gap-2 items-start self-start min-h-1.5 right-[155px] top-[253px]" />
+            <ProgressProvider>
+              <MainHeader />
+              {children}
+              <Footer />
+              <div className="flex absolute z-0 gap-2 items-start self-start min-h-1.5 right-[155px] top-[253px]" />
+            </ProgressProvider>
           </main>
         </CartContextProvider>
       </body>

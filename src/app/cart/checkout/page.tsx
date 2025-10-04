@@ -74,7 +74,6 @@ export default function CheckOut() {
             <section>
                 <p>Payment Details</p>
                 {
-
                     Object.entries(form).map(([key, value], indx) =>
                         <div key={indx} className="text-base tracking-wide max-w-[358px] text-zinc-500">
                             <p className="text-black py-2">{key}</p>
