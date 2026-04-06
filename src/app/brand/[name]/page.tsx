@@ -39,7 +39,7 @@ const ProductListing = () => {
 
             <div className="mt-6 w-full">
                 <SectionHeader title={name!.replaceAll("%20", " ").toLocaleUpperCase() + " Shoes"} itemCount={products?.length ?? 0} />
-                <section className="w-full">
+                <section className="mx-auto max-w-[480px]">
                     <div className="grid grid-cols-2 gap-4 items-start mt-6 w-full">
                         {products ? products.map((product, index) => (
                             <ProductCard

@@ -6,7 +6,7 @@ import whatsapplogo from "assets/whatsapp_logo.jpg"
 
 const Footer = () => {
     return (
-        <footer className="overflow-hidden w-full px-4 pt-4 pb-28 rounded-3xl bg-neutral-800 min-h-[720px] mt-6 max-w-[480px]">
+        <footer className="overflow-hidden w-full px-4 pt-4 pb-28 rounded-3xl bg-neutral-800 min-h-[720px] mt-6">
             {/* <div className="z-0 w-full font-medium">
                 <h2 className="text-2xl text-orange-400">About us</h2>
                 <p className="mt-1 text-base text-stone-200">

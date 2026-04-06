@@ -15,7 +15,7 @@ const BrandHeader: React.FC<PromoBannerProps> = ({
     description,
 }) => {
     return (
-        <section className="flex relative flex-col items-start px-4 pt-11 pb-4 w-full rounded-2xl aspect-[2.403]">
+        <section className="flex relative flex-col items-start px-4 pt-11 pb-4 w-full rounded-2xl aspect-[2.403] lg:aspect-[4.806]">
             <Image
                 src={backgroundImageUrl}
                 width={200}
@@ -23,7 +23,7 @@ const BrandHeader: React.FC<PromoBannerProps> = ({
                 alt="Promotional background"
                 className="object-cover absolute inset-0 size-full rounded-2xl"
             />
-            <div className="relative max-w-full w-[213px] p-3 bg-white/30 rounded-xl">
+            <div className="relative max-w-full w-[213px] p-3 bg-white/30 rounded-xl lg:w-[50%] lg:h-[80%]">
                 <div className="w-full">
                     <p className="text-xs text-stone-300">{tagline}</p>
                     <h2 className="text-xl font-semibold text-white">{title}</h2>

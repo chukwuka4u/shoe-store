@@ -10,7 +10,7 @@ import AllBrands from "@/components/home/AllBrands";
 const HomePage: React.FC = () => {
 
   return (
-    <section className="flex flex-col items-center mx-auto w-full max-w-[480px]">
+    <section className="flex flex-col items-center mx-auto max-w-[480px] md:">
       <HeroSection />
       {/* <AuthOptions /> */}
       <NewDropsSection />
